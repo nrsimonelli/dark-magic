@@ -3,11 +3,11 @@ import React from 'react';
 const Nav = () => {
   return(
     <div className='Nav'>
-      <div className='sub'>
+      <div className='sub text-title'>
         title
       </div>
-      <div className='sub'>
-        links
+      <div className='sub link-blue'>
+        contact
       </div>
     </div>
 

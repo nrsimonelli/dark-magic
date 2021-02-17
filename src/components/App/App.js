@@ -26,7 +26,7 @@ const App = () => {
       <Nav />
      
       <div className="Content">
-        <div className='test'>hello world</div>      
+        <div className='test text-primary'>hello world</div>      
       </div>
       <div className="Content">
         <div className="square color-red-5">
