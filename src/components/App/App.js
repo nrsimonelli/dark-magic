@@ -24,7 +24,24 @@ const App = () => {
       <div>nav</div>
      
       <div>hello world</div>
-          <Switch  checked={isDarkMode}  onChange={toggleTheme} />
+      <div className="Content">
+        <div className="square">
+          1
+        </div>
+        <div className="square">
+          2
+        </div>
+        <div className="square">
+          3
+        </div>
+        <div className="square">
+          4
+        </div>
+      </div>
+      <div>
+      <Switch  checked={isDarkMode}  onChange={toggleTheme} />
+
+      </div>
       
     </div>
   );
