@@ -22,13 +22,13 @@ const App = () => {
 
 
   return (
-    <div className="App fade-in">
+    <div className="App fade-in ev-0">
       <Nav />
      
-      <div className="Content">
+      <div className="Content ev-2">
         <div className='test text-primary'>hello world</div>      
       </div>
-      <div className="Content">
+      <div className="Content ev-2">
         <div className="square color-red-5">
           1
         </div>
@@ -66,7 +66,7 @@ const App = () => {
           12
         </div>
         </div>
-        <div className='Content'>
+        <div className='Content ev-2'>
         <div className="test link-blue">
           Link
         </div>
@@ -83,7 +83,7 @@ const App = () => {
         
 
       
-      <div className="Content">
+      <div className="Content ev-2">
         <div className="test">
         <Switch  checked={isDarkMode}  onChange={toggleTheme} />
 
