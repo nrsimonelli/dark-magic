@@ -3,6 +3,8 @@ import './App.css';
 import { useThemeSwitcher } from "react-css-theme-switcher";
 import { Switch } from 'antd';
 
+import Nav from '../Nav/Nav';
+
 
 const App = () => {
   const [isDarkMode, setIsDarkMode] = useState();
@@ -21,7 +23,7 @@ const App = () => {
 
   return (
     <div className="App fade-in">
-      <div>nav</div>
+      <Nav />
      
       <div>hello world</div>
       <div className="Content">
