@@ -1,7 +1,6 @@
 .App {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     align-items: center;
     min-height: 100vh;
     width: 100vw;
@@ -24,15 +23,26 @@
 
   .Content{
     display: flex;
-    flex-flow: row wrap;
-    width: 100%;
-    height: 30vh;
-    justify-content: space-around;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: calc(100vw - 24px);
+    max-width: 1140px;
+    justify-content: space-between;
     align-items: center;
+    text-align: center;
+    margin-top: 24px;
+    padding-left: 12px;
+    padding-right: 12px;
+    
   }
     .square {
       width: 100px;
       height: 100px;
+      margin-top: 24px;
+
+    }
+    .test {
+      width: 100%;
     }
 
 .Nav {
