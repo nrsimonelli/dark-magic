@@ -3,6 +3,7 @@ import './App.css';
 import { useThemeSwitcher } from "react-css-theme-switcher";
 import { Switch } from 'antd';
 
+
 const App = () => {
   const [isDarkMode, setIsDarkMode] = useState();
   const { switcher, status, themes } = useThemeSwitcher();
@@ -19,11 +20,12 @@ const App = () => {
 
 
   return (
-    <div className="App fade-in" style={{ backgroundColor: "var(--test-color)"}}>
-      <div>
-      hello world
-      </div>
-      <Switch  checked={isDarkMode}  onChange={toggleTheme} />
+    <div className="App fade-in">
+      <div>nav</div>
+     
+      <div>hello world</div>
+          <Switch  checked={isDarkMode}  onChange={toggleTheme} />
+      
     </div>
   );
 }
