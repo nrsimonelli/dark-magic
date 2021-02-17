@@ -1,0 +1,22 @@
+.App {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  
+    min-height: 100vh;
+  }
+  
+  .fade-in {
+    animation: fadeIn;
+    animation-duration: 0.6s;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }

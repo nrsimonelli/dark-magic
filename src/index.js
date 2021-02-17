@@ -18,5 +18,5 @@ ReactDOM.render(
       <App />
     </ThemeSwitcherProvider>
   </React.StrictMode>,
-  document.getElementById('react-root')
+  document.getElementById('root')
 );
