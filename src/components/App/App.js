@@ -5,6 +5,21 @@ import { Switch, Slider } from 'antd';
 
 import Nav from '../Nav/Nav';
 
+const COLOR_LIB = [
+  {color: 'red'},
+  {color: 'volcano'},
+  {color: 'orange'},
+  {color: 'gold'},
+  {color: 'yellow'},
+  {color: 'lime'},
+  {color: 'green'},
+  {color: 'cyan'},
+  {color: 'blue'},
+  {color: 'geekblue'},
+  {color: 'purple'},
+  {color: 'magenta'},
+];
+
 
 const App = () => {
   const [isDarkMode, setIsDarkMode] = useState();
@@ -26,23 +41,6 @@ const App = () => {
     return null;
   }
 
-  const colorLib = [
-    {color: 'red'},
-    {color: 'volcano'},
-    {color: 'orange'},
-    {color: 'gold'},
-    {color: 'yellow'},
-    {color: 'lime'},
-    {color: 'green'},
-    {color: 'cyan'},
-    {color: 'blue'},
-    {color: 'geekblue'},
-    {color: 'purple'},
-    {color: 'magenta'},
-  ];
-
-
-
   return (
     <div className="App fade-in ev-0">
       <Nav />
@@ -56,42 +54,20 @@ const App = () => {
         
       </div>
       <div className="Content ev-2">
-        <div className="square color-red-5">
-          red
-        </div>
-        <div className="square color-volcano-5">
-          volcano
-        </div>
-        <div className="square color-orange-5">
-          orange
-        </div>
-        <div className="square color-gold-5">
-          gold
-        </div>
-        <div className="square color-yellow-5">
-          yellow
-        </div>
-        <div className="square color-lime-5">
-          lime
-        </div>
-        <div className="square color-green-5">
-          green
-        </div>
-        <div className="square color-cyan-5">
-          cyan
-        </div>
-        <div className="square color-blue-5">
-          blue
-        </div>
-        <div className="square color-geekblue-5">
-          geekblue
-        </div>
-        <div className="square color-purple-5">
-          purple
-        </div>
-        <div className="square color-magenta-5">
-          magenta
-        </div>
+        {COLOR_LIB.map(e => 
+          <div 
+            key={e.color} 
+            className={colorValue >= 6 
+              ? 
+              `square txt-lg color-${e.color}-${colorValue} txt-primary` 
+              : 
+              `square txt-lg color-${e.color}-${colorValue}`
+            }
+          >
+            {e.color}
+          </div>
+
+          )}
         </div>
         <div className='Content ev-2'>
           <div className='test-2'>
