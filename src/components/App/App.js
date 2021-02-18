@@ -24,8 +24,9 @@ const COLOR_LIB = [
 const App = () => {
   const [isDarkMode, setIsDarkMode] = useState();
   const [colorValue, setColorValue] = useState(5);
+  
   const { switcher, status, themes } = useThemeSwitcher();
-
+  
   const toggleTheme = (isChecked) => {
     setIsDarkMode(isChecked);
     switcher({ theme: isChecked ? themes.dark : themes.light });
@@ -33,8 +34,6 @@ const App = () => {
 
   const handleSlider = (value) => {
     setColorValue(value);
-    console.log('color value set to', value);
-    console.log('colorValue state', colorValue);
   }
 
   if (status === "loading") {
@@ -45,11 +44,11 @@ const App = () => {
     <div className="App fade-in ev-0">
       <Nav />
      
-      <div className="Content ev-2">
+           <div className="Content ev-2">
         <div className='test text-primary'>color level</div>
         
         <div className='test-2'>
-        <Slider min={1} max={10} onChange={handleSlider} value={colorValue} style={{ width: 400 }} />
+        <Slider min={1} max={10} onChange={handleSlider} value={colorValue} tooltipVisible={false} style={{ width: 400 }} />
         </div>
         
       </div>

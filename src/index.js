@@ -13,10 +13,8 @@ const themes = {
 
 
 ReactDOM.render(
-  <React.StrictMode>
     <ThemeSwitcherProvider themeMap={themes} defaultTheme="light" >
       <App />
-    </ThemeSwitcherProvider>
-  </React.StrictMode>,
+    </ThemeSwitcherProvider>,
   document.getElementById('root')
 );
