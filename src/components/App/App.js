@@ -94,23 +94,31 @@ const App = () => {
         </div>
         </div>
         <div className='Content ev-2'>
-        <div className="test link-blue">
+          <div className='test-2'>
+          <div className="link-blue">
           Link
         </div>
-        <div className="test link-gold">
+        <div className="link-gold">
           Link
         </div>
-        <div className="test link-green">
+        <div className="link-green">
           Link
         </div>
-        <div className="test link-red">
+        <div className="link-red">
           Link
         </div>
+
+          </div>
+        
         </div>
         
 
       
       <div className="Content ev-2">
+      <div className="test">
+        theme switch
+
+        </div>
         <div className="test">
         <Switch  checked={isDarkMode}  onChange={toggleTheme} />
 

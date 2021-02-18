@@ -47,14 +47,14 @@
     }
     .test {
       width: 100%;
-      margin-top: 12px;
+      margin-top: 24px;
     }
     .test-2 {
       width: 100%;
       display: flex;
       flex-direction: row;
       justify-content: space-around;
-      margin-top: 12px;
+      margin-top: 24px;
     }
 
 .Nav {
