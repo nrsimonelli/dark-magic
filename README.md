@@ -40,7 +40,7 @@ A common need or desired feature for most projects is a primary theme in both da
 
 ### gulp
 
-In order to switch between themes dynamically we needed to make use of gulp as well as react-switch-theme-provider. After defining our less themes and their locations in our gulpfile.js we will run `npx gulp less` to compile them into public css files that we can call upon later. It is important to note that any change you make in one of your less theme files will not take effect until you run the gulp command. 
+In order to switch between themes dynamically we needed to make use of gulp as well as react-switch-theme-provider. After defining our less themes and their locations in our gulpfile.js we will run `npx gulp less` to compile them into public css files that we can call upon later. It is important to note that your gulpfile.js must be in the root of your project folder and that any change you make to a less file will not take effect until you have run the npx gulp command. 
 
 ![gulp](/src/static/img/gulp.png)
 
