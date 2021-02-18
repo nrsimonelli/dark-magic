@@ -1,12 +1,13 @@
 import React from 'react';
 import { GithubOutlined } from '@ant-design/icons';
 
-const Nav = () => {
+const Nav = ( val ) => {
+
   return(
     <div className='Nav ev-3 color-primary'>
       <div className='Nav-margins'>
         <div className='txt-xl'>
-          Theme switch
+          {val.darkMode ? "Dark" : "Light" }
         </div>
         <div>
           <a href='https://github.com/nrsimonelli' target="_blank" style={{ textDecoration: 'inherit', color: 'inherit' }}>

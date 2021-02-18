@@ -22,7 +22,7 @@ const COLOR_LIB = [
 
 
 const App = () => {
-  const [isDarkMode, setIsDarkMode] = useState();
+  const [isDarkMode, setIsDarkMode] = useState(false);
   const [colorValue, setColorValue] = useState(5);
   
   const { switcher, status, themes } = useThemeSwitcher();
@@ -46,7 +46,7 @@ const App = () => {
 
   return (
     <div className="App fade-in ev-0">
-      <Nav />
+      <Nav darkMode={isDarkMode} />
       <div className="Content ev-2">
         <div className='test text-primary'>
           color level
