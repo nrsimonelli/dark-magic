@@ -1,6 +1,6 @@
 # Theme Spike -- Getting Started
 
->> 2-Day Sprint on front end project development
+> 2-Day Sprint on front end project development
 
 Begin this project with npx create-react-app for boiler plate & remove unnecessary features from there or clone this repository, install dependencies, and run start script of choice.
 
@@ -31,11 +31,11 @@ This way, you will be able to tranisiton between your differnt themes without ha
 
 A common need or desired feature for most projects is a primary theme in both dark and light modes. I have decided to arrange my spike around this idea. Here are images of each theme below:
 
-![Light]('/src/static/img/light.png)
+![light](/src/static/img/light.png)
 
 &
 
-![Dark]('/src/static/img/dark.png)
+![dark](/src/static/img/dark.png)
 
 
 ### gulp
