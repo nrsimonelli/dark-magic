@@ -40,17 +40,20 @@ const App = () => {
     return null;
   }
 
+  const darkToggle = <div className="test">
+    <Switch checked={isDarkMode} onChange={toggleTheme} />
+  </div>;
+
   return (
     <div className="App fade-in ev-0">
       <Nav />
-     
-           <div className="Content ev-2">
-        <div className='test text-primary'>color level</div>
-        
-        <div className='test-2'>
-        <Slider min={1} max={10} onChange={handleSlider} value={colorValue} tooltipVisible={false} style={{ width: 400 }} />
+      <div className="Content ev-2">
+        <div className='test text-primary'>
+          color level
         </div>
-        
+        <div className='test-2'>
+          <Slider min={1} max={10} onChange={handleSlider} value={colorValue} tooltipVisible={false} style={{ width: 400 }} />
+        </div>
       </div>
       <div className="Content ev-2">
         {COLOR_LIB.map(e => 
@@ -65,44 +68,30 @@ const App = () => {
           >
             {e.color}
           </div>
-
           )}
-        </div>
-        <div className='Content ev-2'>
-          <div className='test-2'>
-          <div className="link-blue">
-          Link
-        </div>
-        <div className="link-gold">
-          Link
-        </div>
-        <div className="link-green">
-          Link
-        </div>
-        <div className="link-red">
-          Link
-        </div>
-
-          </div>
-        
-        </div>
-        
-
-      
-      <div className="Content ev-2">
-      <div className="test">
-        theme switch
-
-        </div>
-        <div className="test">
-        <Switch  checked={isDarkMode}  onChange={toggleTheme} />
-
-        </div>
-       
-      
-
       </div>
-      
+      <div className='Content ev-2'>
+        <div className='test-2'>
+          <div className="link-blue">
+            Link
+          </div>
+          <div className="link-gold">
+            Link
+          </div>
+          <div className="link-green">
+            Link
+          </div>
+          <div className="link-red">
+            Link
+          </div>
+        </div>
+      </div>
+      <div className="Content ev-2">
+        <div className="test">
+          theme switch
+        </div>
+        {darkToggle}
+      </div>   
     </div>
   );
 }
