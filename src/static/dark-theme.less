@@ -2,7 +2,7 @@
 @import '~antd/dist/antd.less';
 @import '~antd/lib/style/themes/dark.less';
 
-// colors
+// Color Library
     .color-red-1 {
         background-color: @red-1;
     }
@@ -375,25 +375,45 @@
         background-color: @magenta-10;
     }
 
-    .text-title {
-        color: rgba(255, 255, 255, .85);
+// Text size
+    .txt-xl {
+        font-size: 20px;
+        line-height: 28px;
+    }
+    .txt-lg {
         font-size: 16px;
         line-height: 24px;
     }
-    .text-primary {
-        color: rgba(255, 255, 255, .85);
+    .txt-md {
         font-size: 14px;
         line-height: 22px;
     }
-    .text-secondary {
-        color: rgba(255, 255, 255, .45);
+    .txt-sm {
         font-size: 12px;
         line-height: 20px;
     }
-    .text-disabled {
+
+// Text color
+    .txt-gray-0 {
+        color: rgba(0, 0, 0, .85);
+    }
+    .txt-gray-1 {
+        color: rgba(0, 0, 0, .45);
+    }
+    .txt-gray-2 {
+        color: rgba(0, 0, 0, .25);
+    }
+    .txt-gray-3 {
         color: rgba(255, 255, 255, .30);
     }
+    .txt-gray-4 {
+        color: rgba(255, 255, 255, .45);
+    }
+    .txt-gray-5 {
+        color: rgba(255, 255, 255, .85);
+    }
 
+// Link text
     .link-blue {
         color: @blue-6;
     }
@@ -407,6 +427,7 @@
         color: @red-5;
     }
 
+// Elevation
     .ev-0 {
         background-color: #000000;
     }
