@@ -1,11 +1,32 @@
 # Getting Started
 
-Begin this project with npx create-react-app for boiler plate
+Begin this project with npx create-react-app for boiler plate & remove unnecessary features from there or clone this repository, install dependencies, and run start script of choice.
 
-## Features
+## Features & Use
 
-![light](/src/static/img/light.png?raw=true)
-![dark](/src/static/img/dark.png)
+The goal of this project is to provide an effecient starting point for development from a front end perspective. I wanted to cut down on the time needed to create an aesthetically pleasing user experience while also avoiding the hassle of re-defining & re-naming css classes with each new idea.
+
+The primary feature of this application is the theme switch that takes advantage of shared class names over multiple desired themes. Here, I have chosen to use antd's color library and applied it to a dark and light theme. To accomplish this I am using less files and will define my shared variables there,
+
+### less
+
 ![less](/src/static/img/code-1.png)
+
+This way, you will be able to tranisiton between your differnt themes without having to change your css at all. The blue you picked in light mode will adjust seamlessly to dark mode due to the shared color variables in our less theme files.
+
+![]()
+![]()
+
+### gulp
+
+In order to switch between themes dynamically we needed to make use of gulp as well as react-switch-theme-provider. After defining our less themes and their locations in our gulpfile.js we will run `npx gulp less` to compile them into public css files that we can call upon later. It is important to note that any change you make in one of your less theme files will not take effect until you run the gulp command. 
+
+### theme provider
+
+To allow our project to make utilize the desired css file  we need to wrap our application in a theme provider. This is done in index.js as follows: 
+
 ![theme](/src/static/img/code-3.png)
+
+Then we use a simple hook and switch to toggle between our desired themes. If you desired more one alternative theme option I would advise making use of a Select component rather than multiple Switches/Toggles.
+
 ![hook](/src/static/img/code-2.png)
