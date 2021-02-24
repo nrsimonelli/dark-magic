@@ -1,4 +1,4 @@
-import { React, useState } from 'react';
+import { React, useState, useCallback, useEffect } from 'react';
 import './App.css';
 import { useThemeSwitcher } from "react-css-theme-switcher";
 import { Switch, Slider } from 'antd';
@@ -32,6 +32,18 @@ const App = () => {
     switcher({ theme: isChecked ? themes.dark : themes.light });
   };
 
+  const handleTheme = useCallback(() => {
+    setIsDarkMode((prev) => !prev);
+  }, []);
+
+  useEffect(() => {
+    if (isDarkMode) {
+      switcher({ theme: themes.dark });
+    } else {
+      switcher({ theme: themes.light });
+    }
+  }, [isDarkMode, switcher, themes]);
+
   const handleSlider = (value) => {
     setColorValue(value);
   }
@@ -46,7 +58,7 @@ const App = () => {
 
   return (
     <div className="App fade-in ev-0">
-      <Nav darkMode={isDarkMode} />
+      <Nav darkMode={isDarkMode} clickFunction={handleTheme} />
       <div className="Content ev-2">
         <div className='test text-primary'>
           color level
