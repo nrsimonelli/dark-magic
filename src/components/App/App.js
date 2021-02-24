@@ -1,7 +1,7 @@
 import { React, useState, useCallback, useEffect } from 'react';
 import './App.css';
 import { useThemeSwitcher } from "react-css-theme-switcher";
-import { Switch, Slider } from 'antd';
+import { Slider } from 'antd';
 
 import Nav from '../Nav/Nav';
 
@@ -26,11 +26,6 @@ const App = () => {
   const [colorValue, setColorValue] = useState(5);
   
   const { switcher, status, themes } = useThemeSwitcher();
-  
-  const toggleTheme = (isChecked) => {
-    setIsDarkMode(isChecked);
-    switcher({ theme: isChecked ? themes.dark : themes.light });
-  };
 
   const handleTheme = useCallback(() => {
     setIsDarkMode((prev) => !prev);
@@ -51,10 +46,6 @@ const App = () => {
   if (status === "loading") {
     return null;
   }
-
-  const darkToggle = <div className="test">
-    <Switch checked={isDarkMode} onChange={toggleTheme} />
-  </div>;
 
   return (
     <div className="App fade-in ev-0">
@@ -99,10 +90,9 @@ const App = () => {
         </div>
       </div>
       <div className="Content ev-2">
-        <div className="test">
-          theme switch
-        </div>
-        {darkToggle}
+       <div className='txt-sm' style={{ width: '100%', textAlign: 'center', marginTop: 20 }}>
+       developed by nrsimonelli
+         </div>
       </div>   
     </div>
   );
